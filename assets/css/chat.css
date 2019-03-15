@@ -1,0 +1,273 @@
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+#main-container {
+	width: 100vw;
+	height: 100vh;
+}
+
+#navbar {
+	background: #eeeeee;
+}
+
+.dropdown-toggle::after {
+	display: none;
+}
+
+.chat-list-item {
+	background: white;
+	cursor: pointer;
+}
+
+.chat-list-item:hover {
+	background-color: #f4f5f5;;
+}
+
+.chat-list-item:active {
+	background-color: #e9ebeb;
+}
+
+.chat-list-item.active {
+	background-color: #e9ebeb;
+}
+
+.chat-list-item .chat-details {
+	width: 60%;
+}
+
+.chat-list-item.unread .name,
+.chat-list-item.unread .last-message {
+	font-weight: bold;
+}
+
+.chat-list-item .last-message,
+#message-area #navbar #details {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#message-area {
+	border-left: 1px solid #dcdcdc;
+}
+
+#message-area .overlay {
+	background: hsl(0, 0%, 80%);
+}
+
+#input-area {
+	background: hsl(0, 0%, 95%);
+}
+
+#input-area #input {
+	outline: none;
+}
+
+.message-item {
+	position:relative;
+	max-width: 60%;
+	word-break: break-word;
+	
+	/*novo*/
+	font-size: 14.2px;
+    line-height: 19px;
+    color: #262626;
+}
+.message-item.self {
+	background: #dcf8c6!important;
+}
+.message-item .number {
+	color: #1f7aec !important;
+}
+.message-item .options {
+	position: absolute;
+	top: 0;
+	right: -3px;
+	opacity: 0;
+	transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+}
+.message-item:hover .options {
+	opacity: 1;
+	right: 0;
+}
+
+.messages-bg {
+	background-repeat: repeat repeat;
+	background-image: url(../../assets/images/background.png);
+	top: 0;
+	height: 100%;
+	width: 100%; }
+
+#messages {
+	flex: 1!important;
+	/*background: hsl(0, 0%, 80%);*/
+	background-color: #e5ddd5;
+	overflow: auto;
+}
+
+#profile-settings {
+	position: absolute;
+	top: 0;
+	left: -110%;
+	background: hsl(0, 0%, 95%);
+	transition: all 0.2s ease-in;
+	-moz-transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+}
+
+#profile-pic {
+	cursor: pointer;
+	position: relative;
+	width: 200px;
+}
+
+.profile-input {
+	border-bottom: 2px solid transparent  !important;
+	outline: none;
+}
+
+.profile-input:focus {
+	border-bottom-color: hsl(0, 0%, 50%) !important;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+
+/* new */
+.p-2-1 {
+    padding: 12px!important; /* 0.75rem */
+}
+.border-bottom-2 {
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.rounded-20 {
+    border-radius: 20px!important;
+}
+
+/* messagem received */
+.rounded-7-5 {
+	border-radius: 7.5px!important;	
+}
+.m-shadow {
+	box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13)!important;
+}
+.m-p-r {
+	padding: 6px 7px 8px 9px!important;
+}
+
+input.search-query {
+	padding-left:50px;
+	font-size: 14px;
+	height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    top: 13px;
+    transition: opacity .14s linear;
+    white-space: nowrap;
+    z-index: 0; }
+
+div.form-search {
+	position: relative; }
+	
+div.form-search:before {
+	content:'';
+	display: block;
+	width: 14px;
+	height: 14px;
+	background-image: url(http://getbootstrap.com/2.3.2/assets/img/glyphicons-halflings.png);
+	background-position: -48px 0;
+	position: absolute;
+	top:9px;
+	left:15px;
+	opacity: .5;
+	z-index: 1;
+}
+.form-search input {
+	width:100%;
+	color: #a0a0a0; }
+#chat-search {
+	background: #f8f8f8;
+	display: flex; }
+
+input.search-query:focus {
+	outline-width: 0; }
+					
+.align-self-end.tail {
+    border-top-right-radius: 0px!important;	
+}
+.align-self-end.tail .tail-container {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAMAAADp2asXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAADAUExURUxpcXmHa4maet/4yA0aDRMTE8fhsgAAAAAAAMDXrCsxJeX/z1xzXIiYetPsvGBsVUdPPuH8zOH8zNDrvMvmtrrOpwAAAAAAABUVFRoaGtnyxLTMozQ+MMfftFBeSR8nH5aoh6q/mW9+ZN/4yMjhtRwlHAAAAIOWd+r/06C1kkNLOwsLC9z4xur/0+n/0t76x9v4xeL9y+b/z+j/0d/7yeH8yuX/zeD8ytz5xt76yOP/zeH+y+b/zuD8yd35xuf/0MY9jkkAAAAsdFJOUwBvd/ATDZIBAsMp/At/11c9yPbizHoICQwT4bY1ykkgjahl6s8bBYT6nUAWOLbtFAAAAIhJREFUKM/tzbUWwlAURNFBE9zdg0NecLf//yvKUJyUdDnl7HXXletXqmXl9wPbQ9JCcC+VJsOj2mDwovzj3osjHGNFEVxNRAj7UR1hlx+I4FbuC8HkZBE8OwnRxamdFsEmUxCCGdoI51RLBK9xVwTvjyMEbzlDMJMp7lqseNc8YNc6CGyF/a0vcmwhZbCG+kEAAAAASUVORK5CYII=);
+	right: -18px; }
+	
+.align-self-start.tail {
+    border-top-left-radius: 0px!important;	
+}
+.align-self-start.tail .tail-container {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAmCAMAAADp2asXAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACQUExURUxpccPDw9ra2m9vbwAAAAAAADExMf///wAAABoaGk9PT7q6uqurqwsLCycnJz4+PtDQ0JycnIyMjPf3915eXvz8/E9PT/39/RMTE4CAgAAAAJqamv////////r6+u/v7yUlJeXl5f///5ycnOXl5XNzc/Hx8f///xUVFf///+zs7P///+bm5gAAAM7Ozv///2fVensAAAAvdFJOUwCow1cBCCnqAhNAnY0WIDW2f2/hSeo99g1lBYT87vDXG8/6d8oL4sgM5szrkgl660OiZwAAAHRJREFUKM/ty7cSggAABNFVUQFzwizmjPz/39k4YuFWtm55bw7eHR6ny63+alnswT3/rIDzUSC7CrAziPYCJCsB+gbVkgDtVIDh+DsE9OTBpCtAbSBAZSEQNgWIygJ0RgJMDWYNAdYbAeKtAHODlkHIv997AkLqIVOXVU84AAAAAElFTkSuQmCC);
+	left: -18px; }
+
+.tail-container {    
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 24px;
+    height: 19px;	
+	border-top-left-radius: 0px; }
+
+.tail-container {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* ticks */
+.undelivered {
+    background-image: url("././assets/svg/tick_undelivered.svg");
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+	background-repeat: no-repeat;
+	position: relative;
+    top: 10px;
+    right: -3px; }
+
+.delivered {
+    background-image: url("././assets/svg/tick_unread.svg");
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+	background-repeat: no-repeat;
+	position: relative;
+    top: 10px;
+    right: -3px; }
+
+.read {
+    background-image: url("././assets/svg/tick_read.svg");
+	display: inline-block;
+    width: 18px;
+    height: 18px;
+	background-repeat: no-repeat;
+	position: relative;
+    top: 10px;
+    right: -3px; }
