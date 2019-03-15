@@ -284,8 +284,8 @@
 	function getAllMessages()
 	{
 		global $db;		
-		$query = "SELECT * FROM message";
-		$result = mysqli_query($db, $query);
+		$query  = "SELECT * FROM message WHERE recvId='$myId' OR sender='$myId'";
+		$result = mysqli_query($db, $query) or die (mysqli_error($db));
 		
 		$thread = [];
 		foreach($result as $message)
