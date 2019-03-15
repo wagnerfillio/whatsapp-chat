@@ -288,18 +288,28 @@ let checkNewMessage = () => {
 
 update = () => {
     $.ajax({
-	    type: 'POST',
-		url: '../functions.php?action=checkNewMessage',
-		cache: false,
-        success: (function (data) {
-			console.log(data);
-			$.each(data, function() {
-			//data.map((msg) => {
-				alert('new message: ' + this.body + '\nsender the contact ' + this.sender + ' and delivered to user ' + this.recvId);
-				$.ajax({ type: 'POST', url: '../functions.php?action=markRead', data: {id: this.id}});
-		    });
-	    })
-	});
+        type: 'POST',
+        url: '../functions.php?action=checkNewMessage',
+        cache: false,
+        success: (function(data) {
+            console.log(data);
+            if (data != '') {
+                $.each(data, function() {
+                //data.map((msg) => {
+                    alert('new message: ' + this.body + '\nsend from contact ' + this.sender + ' and delivered to user ' + this.recvId);
+                    $.ajax({
+                        type: 'POST',
+                        url: '../functions.php?action=markRead',
+                        data: {
+                            id: this.id
+                        }
+                    });
+                });
+            } else {
+                alert('no messages received');
+            }
+        })
+    });
 }
 
 let init = () => {
