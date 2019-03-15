@@ -45,6 +45,7 @@
 							        <a class="dropdown-item" href="#">Archived</a>
 							        <a class="dropdown-item" href="#">Starred</a>
 							        <a class="dropdown-item" href="#">Settings</a>
+								<a class="dropdown-item" href="home.php">Back Home</a>
 							        <a class="dropdown-item" href="chat.php?logout='1'" style="color:red;">Log Out</a>
 								</li>
 						    </ul>
