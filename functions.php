@@ -283,7 +283,8 @@
 	
 	function getAllMessages()
 	{
-		global $db;		
+		global $db;
+		$myId	= $_SESSION['user']['id'];
 		$query  = "SELECT * FROM message WHERE recvId='$myId' OR sender='$myId'";
 		$result = mysqli_query($db, $query) or die (mysqli_error($db));
 		
