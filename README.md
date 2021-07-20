@@ -1,8 +1,8 @@
 ## WhatsApp-Chat - JavaScript and PHP ##
-## How to run project: ##<br/>
-1) Start apache and mysql and launch site on browser<br/>
-2) Copy and paste content file `sql.sql` in `MySQL`<br/>
-3) Insert credentials for access in database `MySQL`, <b>line 5</b> the file `functions.php`<br/>
+## How to run project: ##
+1) Start apache and mysql and launch site on browser
+2) Copy and paste content file `sql.sql` in `MySQL`
+3) Insert credentials for access in database `MySQL`, <b>line 5</b> the file `functions.php`
 
 
 ## Initial credentials ##
